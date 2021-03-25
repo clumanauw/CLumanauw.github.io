@@ -192,24 +192,20 @@ nav a.active {
 /* tips.html grid layout setup */
 .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
 	grid-gap: 10px;
 	align-items: start;
 	justify-items: center;
 	margin: auto;
-	width: 540px;
+	width: 650px;
 }
 
 .grid img {
 	border: 1px solid rgba(0,0,0,0.3);
 	box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
-	max-width: 100%;
+	width: 100%;
 }
 
-/* .grid img:nth-child(2) {
-	grid-column: 1/2;
-	grid-row: span 2;
-} */
 
 /* footer */
 .footer {
