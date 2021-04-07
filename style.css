@@ -23,7 +23,8 @@ h1 {
 
 h2 {
 	font-size: 25px;
-	margin: 10px;
+	margin: 15px;
+	padding: 20px;
 }
 
 p {
@@ -31,7 +32,18 @@ p {
     padding-top: 10px;
 	padding-bottom: 5px;
 	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
+
+/* .about p{
+	position: absolute;
+	top: 750px;
+	padding-left: 15%;
+	padding-right: 15%;
+} */
 
 img{
 	width: 100%;
@@ -41,7 +53,8 @@ nav {
 	overflow: hidden;
 	background-color: none;
 	display: flex;
-    flex-direction: column;
+	/* desktop view */
+	justify-content: space-between;
 }
 
 /* extended navigation formatting */
@@ -49,8 +62,10 @@ nav img{
 	width:75px;
 	height:75px;
 	display: block;
+	margin-left: 20px;
+	/* mobile view
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; */
 }
 
 nav a {
@@ -66,6 +81,9 @@ nav ul {
 	padding: 0;
 	overflow: hidden;
 	background-color: none;
+	/* desktop view */
+	display: flex;
+	flex-direction: row;
 }
 
 nav li {
@@ -123,19 +141,21 @@ nav a.active {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
+	margin-top: 20px;
+	padding: 20px;
 }
 
 /* saved.html images setup */
 .saved {
-	display: -ms-flexbox;
+	/* display: -ms-flexbox; */
   	display: flex;
- 	-ms-flex-wrap: wrap;
+ 	/* -ms-flex-wrap: wrap; */
   	flex-wrap: wrap;
   	padding: 0 4px;
 }
 
 .column {
-	-ms-flex: 33%;
+	/* -ms-flex: 33%; */
  	flex: 33%;
   	max-width: 33%;
   	padding: 0 4px;
@@ -162,23 +182,12 @@ nav a.active {
 	font-size: 15px;
 }
 
-#row1 {
-	padding: 20px;
-}
-
-#row2 {
-	padding: 20px;
-}
-
-#row3 {
-	padding: 20px;
-}
 
 /* tips.html saved.html about.html header and paragraph setup */
 .others h1 {
 	/* color: #000000; */
 	background-color: #32612D;
-	margin-top: 5px;
+	margin-top: 15px;
 	margin-bottom: 15px;
 	margin-left: 50px;
 	margin-right: 50px;
@@ -186,6 +195,8 @@ nav a.active {
 
 .details p {
 	background-color: #ddd;
+	padding-top: 0px;
+	margin-bottom: 20px;
 
 }
 
@@ -195,24 +206,54 @@ nav a.active {
 	grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
 	grid-gap: 10px;
 	align-items: start;
-	justify-items: center;
-	margin: auto;
+	/* justify-items: center; */
+	margin-left: auto;
+	margin-right: auto;
 	width: 650px;
+	padding: 15px;
 }
 
 .grid img {
 	border: 1px solid rgba(0,0,0,0.3);
 	box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
-	width: 100%;
+	/* width: 100%; */
 }
 
+.allergens {
+	/* position: absolute; */
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 75%;
+}
+
+.skip a {
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 3;
+    position: absolute;
+    top: -40px;
+}
+
+.skip a:focus {
+    top: 6px;
+    color: #FFFFFF;
+    background:rgba(5, 78, 17, 0.849);
+}
 
 /* footer */
 footer {
+	position: relative;
+	left: 0;
 	bottom: 0;
 	font-size: 11px;
-	color: #000000;
-	margin: 10px;
+	color: #FFFFFF;
+	margin-top: 100px;
+	/* add a class for about page for footer specifically */
+	/* margin: 10px; */
+	width: 100%;
 }
 
 /* mobile screen */
@@ -232,11 +273,11 @@ footer {
 }
 
 h1 {
-	font-size: 35px;
+	font-size: 30px;
 }
 
 h2 {
-	font-size: 25px;
+	font-size: 15px;
 }
 
 /* tips.html columns */
@@ -250,4 +291,66 @@ h2 {
 	flex: 100%;
 	max-width: 100%;
 }
+
+nav {
+	overflow: hidden;
+	background-color: none;
+	display: flex;
+}
+
+nav img {
+	width:75px;
+	height:75px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+
+.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+	height: 35%;
+}
+
+.centered h1 {
+	/* display: block; */
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+	/* CSS */
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+h1 {
+	font-size: 45px;
+}
+
+h2 {
+	font-size: 38px;
+	padding: 5px;
+}
+
+p{
+	font-size: 33px;
+}
+
+.rows {
+	width: 33%;
+}
+
+.grid {
+	font-size: 25px;
+}
+
 }
