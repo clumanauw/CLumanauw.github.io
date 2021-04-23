@@ -1,10 +1,8 @@
-/* universal edits */
 * {
 	box-sizing: border-box;
-	font-family: Garamond, serif;
+	font-family: "Century Gothic", sans-serif;
 }
 
-/* baseline formatting */
 body {
 	margin: 0;
 }
@@ -14,21 +12,28 @@ header{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
+	padding: 15px;
 }
 
 h1 {
     color: #FFFFFF;
-	font-size: 36px;
+	font-size: 35px;
 }
 
 h2 {
-	font-size: 25px;
-	margin: 15px;
-	padding: 20px;
+	font-size: 30px;
+	margin: auto;
+	width: 50%;
+}
+
+h3 {
+	font-size: 30px;
+	margin: auto;
+	width: 50%;
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 10px;
 	padding-bottom: 5px;
 	text-align: center;
@@ -38,13 +43,6 @@ p {
 	margin-right: 10%;
 }
 
-/* .about p{
-	position: absolute;
-	top: 750px;
-	padding-left: 15%;
-	padding-right: 15%;
-} */
-
 img{
 	width: 100%;
 }
@@ -53,19 +51,14 @@ nav {
 	overflow: hidden;
 	background-color: none;
 	display: flex;
-	/* desktop view */
 	justify-content: space-between;
 }
 
-/* extended navigation formatting */
 nav img{
 	width:75px;
 	height:75px;
 	display: block;
 	margin-left: 20px;
-	/* mobile view
-	margin-left: auto;
-	margin-right: auto; */
 }
 
 nav a {
@@ -81,7 +74,6 @@ nav ul {
 	padding: 0;
 	overflow: hidden;
 	background-color: none;
-	/* desktop view */
 	display: flex;
 	flex-direction: row;
 }
@@ -103,59 +95,28 @@ nav li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-family: Helvetica, sans-serif;
 	font-size: 16px;
 }
 
 nav a:hover {
-	background-color: #ddd;
+	background-color: #fceba9;
 }
 
 nav a.active {
-	background-color: #ddd;
-	color: #006400;
+	background-color: #fceba9;
+	color: #207258;
 	text-decoration: underline;
-}
-
-/* index.html header + image*/
-.container {
-	position: relative;
-	text-align: center;
-	color: white;
-	filter: grayscale(25%);
-	width: 100%;
-}
-
-/* index.html h1 and h2 */
-.centered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: rgba(5, 78, 17, 0.849);
-}
-
-/* about.html main img */
-.center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
-	margin-top: 20px;
-	padding: 20px;
+	font-weight: bold;
 }
 
 /* saved.html images setup */
 .saved {
-	/* display: -ms-flexbox; */
   	display: flex;
- 	/* -ms-flex-wrap: wrap; */
   	flex-wrap: wrap;
   	padding: 0 4px;
 }
 
 .column {
-	/* -ms-flex: 33%; */
  	flex: 33%;
   	max-width: 33%;
   	padding: 0 4px;
@@ -167,48 +128,181 @@ nav a.active {
 	width: 100%;
 }
 
-/* index.html main class setups */
-.row a:link, .row a:visited{
-	background-color: #32612D;
-	padding: 12px 25px;
+.overlay {
+	position: absolute;
+	bottom: 0;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.5); /* Black see-through */
+	color: #f1f1f1;
+	width: 100%;
+	transition: .5s ease;
+	opacity:0;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
 	text-align: center;
-	text-decoration: underline;
-	display: inline-block;
-	margin: 10px;
+}
+
+.saved:hover .overlay {
+	opacity: 1;
+}
+
+.saved-text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/* index.html*/
+.grid2 {
+	margin: 80px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	align-items: center;
+}
+
+.grid2 > article {
+	background: #eee5e9;
+	border: none;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 20px;
-	width: 95%;
-	color: #FFFFFF;
-	font-family: Helvetica, sans-serif;
-	font-size: 15px;
+	text-align: center;
+	width: 250px;
+	transition: transform .3s;
 }
 
-#row1 {
-	padding: 20px;
+.grid2 > article:hover{
+	transform: translateY(5px);
+	box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
 }
 
-#row2 {
-	padding: 20px;
+.grid2 > article img {
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 }
 
-#row3 {
-	padding: 20px;
+.body-text {
+	padding: 0 20px 20px;
 }
 
+.body-text h3 {
+	text-transform: uppercase;
+}
+
+.text button {
+	background: #b1931b;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+	padding: 10px;
+	width: 100%;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+
+}
+
+/* parallax */
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	transform-style: inherit;
+	align-items: center;
+}
+
+section:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	/* background: linear-gradient(to top, #0a2a43, transparent); */
+	z-index: 10000;
+}
+
+section:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	mix-blend-mode: color;
+}
+
+
+section img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+	opacity: .8;
+}
+
+#text {
+	position: relative;
+	color: #fff;
+	font-size: 10em;
+	z-index: 1;
+	margin: auto;
+}
+
+.sunflower img{
+	border-radius: 50%;
+}
+
+
+/* how to make the below animation to only daily resto */
+:root {
+	--mainColor: #D8BFD8;
+}
+
+.resto {
+	background:
+	   linear-gradient(
+		 to right,
+		 var(--mainColor) 0%,
+		 var(--mainColor) 5px,
+		 transparent 5px
+	   );
+	background-repeat: repeat-x;
+	background-size: 100%;
+	color: #000;
+	padding-left: 10px;
+	text-decoration: none;
+}
+
+.resto:hover {
+	background:
+	   linear-gradient(
+		 to right,
+		 var(--mainColor) 0%,
+		 var(--mainColor) 5px,
+		 transparent
+	   );
+}
 /* tips.html saved.html about.html header and paragraph setup */
 .others h1 {
 	/* color: #000000; */
 	background-color: #32612D;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	margin-left: 50px;
-	margin-right: 50px;
-}
-
-.details p {
-	background-color: #ddd;
-	padding-top: 0px;
-	margin-bottom: 20px;
-
 }
 
 /* tips.html grid layout setup */
@@ -217,7 +311,6 @@ nav a.active {
 	grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
 	grid-gap: 10px;
 	align-items: start;
-	/* justify-items: center; */
 	margin-left: auto;
 	margin-right: auto;
 	width: 650px;
@@ -254,6 +347,176 @@ nav a.active {
     background:rgba(5, 78, 17, 0.849);
 }
 
+/* about page */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  box-shadow: 2px 2px 5px 2px rgb(180 180 180 / 89%);
+}
+
+input[type=submit] {
+  background-color: #32612D;
+  color:white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 65%;
+  appearance: auto;
+  display: block;
+  margin: auto;
+}
+
+input[type=submit]:hover {
+  background-color: #6b9d6cfa;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.form {
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  width: 65%;
+  margin: auto;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.VegOut {
+	animation: pulse 10s;
+}
+
+  @keyframes pulse {
+	0% {
+	  background-color: #3d2d53e0;
+	}
+	100% {
+	  background-color: #32612D;
+	}
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  color:gray;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.flex2 {
+	width: 90%;
+	margin: 50px auto;
+}
+
+.row2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-flow: wrap;
+}
+
+.card {
+	width: 20%;
+	background: #fff;
+	border: 1px solid #ccc;
+	margin-bottom: 50px;
+	transition: 0.3s;
+}
+
+.card-header {
+	text-align: center;
+	padding: 50px 10px;
+	background: linear-gradient(to right, #32612D, #488641);
+	color: #000000;
+ }
+
+.card-body {
+	padding: 30px 20px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.card-body .btn {
+	display: block;
+	color: #fff;
+	text-align: center;
+	background: linear-gradient(to right, #32612D, #488641);
+	margin-top: 30px;
+	text-decoration: none;
+	padding: 10px 5px;
+}
+
+.card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+/* beginning of flip card code */
+.flip-card {
+	background-color: transparent;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+  /* This container is needed to position the front and back side */
+.cards {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .cards {
+	transform: rotateY(180deg);
+}
+
+  /* Position the front and back side */
+.front, .back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+}
+
+  /* Style the front side (fallback if image is missing) */
+.front {
+	background-color: #bbb;
+	color: black;
+}
+
+  /* Style the back side */
+.back {
+	background-color: dodgerblue;
+	color: white;
+	transform: rotateY(180deg);
+}
+
 /* footer */
 footer {
 	position: relative;
@@ -267,10 +530,10 @@ footer {
 	width: 100%;
 }
 
+
 /* mobile screen */
 @media screen and (max-width: 600px) {
 
-/* basics */
 .topnav a, .topnav-right {
 	float: none;
 	display: block;
@@ -288,7 +551,7 @@ h1 {
 }
 
 h2 {
-	font-size: 15px;
+	font-size: 20px;
 }
 
 /* tips.html columns */
@@ -333,35 +596,64 @@ nav img {
 	width: 75%;
 }
 
+.flex2 {
+	width: 100%;
+	padding-top: 15px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
 
-	/* CSS */
-.row {
-	display: flex;
-	flex-direction: row;
+.card {
+	width: 80%;
 }
+
+#text {
+	font-size: 75px;
+	background-attachment: scroll;
+}
+
+.grid2 {
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.grid2 > article {
+	text-align: center;
+}
+
+}
+
+/* tablet view */
+@media (min-width: 768px) and (max-width: 992px){
 
 h1 {
 	font-size: 45px;
 }
 
 h2 {
-	font-size: 38px;
-	padding: 5px;
+	font-size: 35px;
+	padding: 10px;
 }
 
 p{
-	font-size: 33px;
-}
-
-.rows {
-	width: 33%;
+	font-size: 25px;
 }
 
 .grid {
 	font-size: 25px;
 }
 
+#text {
+	font-size: 150px;
+
 }
+
+.grid2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+/* @media screen and (max-width: 1000px) {
+.card {
+	width: 40%;
+} */
+

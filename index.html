@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" type="image/png" href="images/vegout_logo.png"/>
+	<link rel="shortcut icon" type="image/png" href="images/logo.png"/>
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
 	<link rel="stylesheet" type="text/css" href="css/starter.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -13,11 +13,10 @@
 	<title>Vegout | Home | The Vegetarian Restaurant Locator</title>
 
 </head>
-<body>
 	<header>
 		<a class="skip" href="#main">Skip to Main Content</a>
 		<nav>
-		<img src = "images/vegout_logo.png" width="10" alt = "vegout_logo"/>
+		<img src = "images/logo.png" alt = "vegout_logo"/>
 
 			<ul>
 				<!-- <li><img src = "images/vegout_logo.png" width="10" alt = "vegout_logo"/></li> -->
@@ -28,40 +27,74 @@
 			</ul>
 		</nav>
 
-	  <div class="container">
-		<img src="images/bkground.jpg" alt="Background">
-		<div class="centered">
-			<h1 class="VegOut">VegOut, <br>so you can eat in.</h1>
-			<h2 class="local">Find a local restaurant that fits your dietary needs and restrictions.</h2>
-		</div>
-	  </div>
+		<!-- <img src="images/bkground.jpg" alt="Background"> -->
+		<!-- <div class="centered"> -->
+	</div>
 	</header>
+<body>
+    <section>
+		<img src="images/background.png" id=bg aria-label="bg">
+		<img src="images/food.png" id=food aria-label="food">
+		<img src="images/table.png" id=table aria-label="table">
+		<h2 id="text">VegOut so you can eat in.</h2>
+	</section>
+	<script type="text/javascript">
+		let bg = document. getElementById("bg");
+		let food = document. getElementById("food");
+		let table = document. getElementById("table");
+		let text = document. getElementById("text");
 
-	<main id="main">
-	  <div class="browse">
-		<h2 id = "browsing">Browse Categories</h2>
-	  </div>
-    
-	  <div class="row">
-		<div class="rows">
-		  <img src="images/popular_business.jpg" alt="Business">
-		  <p>Browse popular places around your city.</p>
-		  <a href="https://www.google.com/search?q=popular+local+restaurants+near+me&rlz=1C1CHBF_enUS917US917&oq=popular+local+rest&aqs=chrome.0.0i457j0j69i57j0i22i30l2.4550j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Popular Businesses Near You</a>
-		</div>
-		<div class="rows">
-		  <img src="images/news.jpg" alt="News">
-		  <p>Learn about the food current events.</p>
-		  <a href="https://www.nytimes.com/topic/subject/food-safety" target="_blank">Food News</a>
-		</div>
-		<div class="rows">
-		  <img src="images/tips.jpg" alt="Tips">
-		  <p>Visit the tips regarding your dietary needs.</p>
-		  <a href="tips.html" target="_blank">Tips</a>
-		</div>
-	  </div>
+		window.addEventListener('scroll', function(){
+			var value = window.scrollY;
 
+			bg.style.top = value * 0.5 + 'px';
+			food.style.top = -value * 0.15 + 'px';
+			text.style.top = value * 1 + 'px';
+		})
+	</script>
+
+	<div class="main-grid">
+		<main class="grid2">
+			<article>
+				<img src='images/popular_business.jpg' alt='profile image'>
+				<div class="body-text"></div>
+					<h3 class="name">Popular Business</h3>
+					<p class="description">Hi there! My name is Anna and I am a book lover, traveler and professional blogger. Follow me to stay connected!</p>
+					<button class='button'>View Info</button>
+			</article>
+
+			<article>
+				<img src='images/news.jpg' alt='profile image'>
+				<div class="body-text"></div>
+					<h3 class="name">News</h3>
+					<p class="description">Hi there! My name is Anna and I am a book lover, traveler and professional blogger. Follow me to stay connected!</p>
+					<button class='button'>View Info</button>
+			</article>
+		
+			<article>
+				<img src='images/popular_business.jpg' alt='profile image'>
+				<div class="body-text"></div>
+					<h3 class="name">Tips</h3>
+					<p class="description">Hi there! My name is Anna and I am a book lover, traveler and professional blogger. Follow me to stay connected!</p>
+					<button class='button'>View Info</button>
+			</article>
+		</main>
+	</div>
+		<h2>Restaurant of the Day:</h2>
+		<div class="resto">
+			<h2>Cafe Sunflower</h2>
+		</div>
+		<div class="sunflower">
+			<a href="https://www.cafesunflower.com/buckhead/" target="_blank" aria-label="Sunflower">
+				<img src="images/cafesunflower.png" alt="Sunflower"/>
+			</a>
+		</div>
+		<p>Cafe Sunflower is one of the best vegan restaurants in Atlanta.</p>
+		<p>Their award-winning kitchen has taken the time to master the art of plant-based cooking. So whether you’ve made a lifelong commitment to veganism, or you’re just going meatless for one meal, we’ve got you covered.</p>
+
+	  </div>
 	</main>
-
+</body>
 	<footer>
 		  <p>University of Michigan School of Information <br/>
 			  &copy; Catherine Lumanauw, Web Design 2021</p>
