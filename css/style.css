@@ -13,6 +13,8 @@ header{
 	display: block;
 	box-sizing: border-box;
 	padding: 15px;
+	background-color: #ac7a10;
+	width: 100%;
 }
 
 h1 {
@@ -92,7 +94,7 @@ nav ul li a {
 
 nav li a {
 	display: block;
-	color: #000000;
+	color:#000000;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -100,12 +102,13 @@ nav li a {
 }
 
 nav a:hover {
-	background-color: #fceba9;
+	background-color: #ffe88e;
+	color: #476344;
 }
 
 nav a.active {
-	background-color: #fceba9;
-	color: #207258;
+	background-color: #ffe88e;
+	color: #476344;
 	text-decoration: underline;
 	font-weight: bold;
 }
@@ -138,18 +141,19 @@ nav a.active {
 }
 
 .grid2 > article {
-	background: #ffec9e;
+	background: #ac7a10;
 	border: none;
 	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 	border-radius: 20px;
 	text-align: center;
 	width: 250px;
 	transition: transform .3s;
+	color: #000000;
 }
 
 .grid2 > article:hover{
 	transform: translateY(5px);
-	box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 26px 0px rgb(24, 77, 53);
 }
 
 .grid2 > article img {
@@ -157,6 +161,7 @@ nav a.active {
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 }
+
 
 .body-text {
 	padding: 0 20px 20px;
@@ -180,6 +185,7 @@ section {
 	justify-content: center;
 	transform-style: inherit;
 	align-items: center;
+	background-color: #ac7a10;
 }
 
 section:before {
@@ -211,7 +217,7 @@ section img {
 	height: 100%;
 	object-fit: cover;
 	pointer-events: none;
-	opacity: .8;
+	opacity: .9;
 }
 
 #text {
@@ -255,7 +261,6 @@ section img {
 .others h1 {
 	/* color: #000000; */
 	background-color: #426f3d;
-	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
@@ -317,7 +322,7 @@ input[type=text], select, textarea {
 
 input[type=submit] {
   background-color: #32612D;
-  color:white;
+  color:#FFFFFF;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -350,24 +355,11 @@ input[type=submit]:hover {
   font-weight: bold;
 }
 
-.VegOut {
-	animation: pulse 10s;
-}
-
-  @keyframes pulse {
-	0% {
-	  background-color: #3d2d53e0;
-	}
-	100% {
-	  background-color: #32612D;
-	}
-}
-
 .btn {
-  background-color: white;
-  border: 1px solid gray;
+  background-color: #FFFFFF;
+  border: 1px solid #7e7e7e;
   border-radius: 1rem;
-  color:gray;
+  color:#7e7e7e;
   padding: 0.5rem;
   text-transform: lowercase;
 }
@@ -400,7 +392,7 @@ input[type=submit]:hover {
 .card-header {
 	text-align: center;
 	padding: 50px 10px;
-	background: linear-gradient(to right, #f1d495, #f1d495);
+	background: linear-gradient(to right, #ac7a10, #ac7a10);
 	color: #000000;
  }
 
@@ -422,13 +414,14 @@ input[type=submit]:hover {
 
 .card:hover {
 	transform: scale(1.05);
-	box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0 40px -10px rgb(24, 77, 53);
 }
 
 .creator {
 	display: block;
 	margin: auto;
 	width: 50%;
+	padding-top: 100px;
 }
 
 .tips-grid {
@@ -492,17 +485,6 @@ input[type=submit]:hover {
 	transform: rotateY(180deg);
 }
 
-.picture .back button {
-	width: 140px;
-	height: 40px;
-	color: #ffffff;
-	background-color: #248ce0;
-	border-radius: 5px;
-	border: none;
-	outline: none;
-	cursor: pointer;
-}
-
 .back figcaption {
 	font-weight: bold;
 }
@@ -515,16 +497,59 @@ input[type=submit]:hover {
 	transform: rotateY(180deg);
 }
 
-/* footer */
+.profile-img:hover:before{
+	opacity:1;
+}
+
+.element {
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	margin: auto;
+	padding-top: 75px;
+}
+
+.element span {
+	text-transform: uppercase;
+	display: block;
+}
+
+.lets {
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 8px;
+	margin-bottom: 10px;
+	position: relative;
+	animation: text 3s 1;
+}
+
+.chat{
+	font-size: 25px;
+}
+
+@keyframes text {
+	0%{
+		color: #FFFFFF;
+		margin-bottom: -40px;
+	}
+	30%{
+		letter-spacing: 25px;
+		margin-bottom:-40px;
+	}
+	85%{
+		letter-spacing: 8px;
+		margin-bottom: -40px;
+	}
+}
+
 footer {
 	position: relative;
-	left: 0;
 	bottom: 0;
 	font-size: 11px;
 	color: #FFFFFF;
 	margin-top: 100px;
-	/* add a class for about page for footer specifically */
-	/* margin: 10px; */
 	width: 100%;
 	background: #476344;
 }
@@ -553,13 +578,11 @@ h2 {
 	font-size: 20px;
 }
 
-/* tips.html columns */
 .grid {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-/* saved.html columns */
 .column {
 	flex: 100%;
 	max-width: 100%;
@@ -572,12 +595,17 @@ nav {
 }
 
 nav img {
-	width:75px;
-	height:75px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 10px;
+	display: none;
+}
+
+nav a {
+	font-size: 12px;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
 }
 
 .centered {
@@ -629,10 +657,11 @@ nav img {
     width: 100%;
 }
 
+
 }
 
 /* tablet view */
-@media (min-width: 630px) and (max-width: 992px){
+@media (min-width: 601px) and (max-width: 1024px){
 
 h1 {
 	font-size: 45px;
@@ -679,18 +708,47 @@ p{
 	margin: auto;
 }
 
-}
-
-@media screen and (max-width: 950px) {
-  .container {
+.container {
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 180px;
-  }
-
-  .content {
-    grid-row: unset;
-    grid-column: unset;
-  }
 }
 
+.content {
+    grid-row: unset;
+    grid-column: unset;
+}
+
+}
+
+@media (min-width: 1025px){
+
+.creator {
+	width: 450px;
+}
+
+.form {
+	width: 750px;
+}
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+.window.addEventListener {
+	background-attachment:scroll;
+}
+
+.lets {
+	animation: none;
+}
+
+.picture .back {
+	transform: none;
+}
+
+.tips-grid .content:hover .picture {
+	transform: none;
+}
+
+}
